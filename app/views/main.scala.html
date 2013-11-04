@@ -10,8 +10,8 @@
     <head>
         <title>niptech Live</title>
         <meta property="og:title" content="Niptech live chatroom" />
-		<meta property="og:image" content="http://live.niptech.com/assets/images/Thumbnail.jpg" />
-		<meta property="og:description" content="Diffusion du live niptech tous les mardi soir à 21h00. Venez nous rejoindre et partagez vos commentaires." />
+		<meta property="og:image" content="@routes.Assets.at("images/Thumbnail.jpg")" />
+		<meta property="og:description" content="@ParameterData.description" />
         <link rel="stylesheet" media="screen" href="@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))">
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/niptechlive-main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
@@ -33,7 +33,7 @@
     </head>
     <body ng-controller="ChatCtrl"
         @user.map { username =>
-            ng-init="connect(@username)"
+            ng-init="connect(@username,'@ParameterData.title')"
         }
     >
         
