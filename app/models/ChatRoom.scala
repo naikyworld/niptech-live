@@ -133,7 +133,7 @@ object ChatRoom {
       }
     }
     twitterStream.addListener(listener)
-    twitterStream.filter(new FilterQuery(0, Array[Long](), Array[String]("niptechlive", "#quote #niptech")))
+    twitterStream.filter(new FilterQuery(0, Array[Long](), Array[String](ParameterData.twitter_stream_account, ParameterData.twitter_stream_tags)))
   }
 
   def nbUsers: Int = members.size

@@ -14,6 +14,13 @@ Vous devez spécifier le(s) mot(s) de passe pour l'administration :
 Vous pouvez spécifier plusieurs mot de passe en les séparant avec des "," ex :
 * authorizedUsers="admin,admin1,admin2"
 
+## Personnalisation  du Chat
+Pour pouvez configurer certain élément du chat en complétant des élément du fichier application.conf :
+* chat.title : Le nom du chat
+* chat.description : La description du chat(og:description -meta)
+* share.twitter : Lien pour partage sur twitter
+* share.facebook : Lien pour partage sur facebook
+* share.googleplus  : Lien pour partage sur googleplus
 
 ## ADMINISTRATION
 L'administration consiste à indiquer l'id du flux youtube à diffuser et à activer ou désactiver le live stream Twitter.
@@ -41,6 +48,8 @@ Pour activer les fonctionalités Twitter vous devez entrer les informations d'ap
 * twitter.AccessToken
 * twitter.AccessTokenSecret
 * twitter.Callback
+* twitter.stream.account : Filtre pour le stream twitter --> compte
+* twitter.stream.tags : Filtre pour le stream twitter --> hashtags
 
 
 

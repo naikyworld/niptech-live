@@ -171,7 +171,7 @@ object Application extends Controller {
       request.session.get("userid").map {
         userid =>
           ChatRoom.quit(userid)
-          Ok(views.html.msg("Tu es déconnecté de la chat room niptech")).withNewSession
+          Ok(views.html.msg(ParameterData.logout)).withNewSession
       } getOrElse {
         Ok(views.html.msg("Pas d'utilisateur connecté"))
       }
